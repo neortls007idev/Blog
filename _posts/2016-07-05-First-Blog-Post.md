@@ -6,7 +6,8 @@ description: "my first blog post"
 author: "Rahul Gupta"
 ---
 
-#Welcome to jekyll
+#Rahul's first post
+
 my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.my first blog post.
 
-###Welcome to jekyll
+###Rahul's first post
