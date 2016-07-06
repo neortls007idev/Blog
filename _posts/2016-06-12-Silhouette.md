@@ -4,6 +4,7 @@ layout: post
 title: "Silhouette"
 description: ""
 author: "Nehul Akash Sahu"
+coverimg: "posts/Silhouette/s1.jpg"
 ---
 
 ## Silhouette
