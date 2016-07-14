@@ -13,7 +13,12 @@ order: 1
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% for post in site.posts reversed %}
+                 {% assign flaggeditems = site.tags.flag  %}
+                {% for post in site.posts %}
+                  {% if post.tags contains "flag" %}
+                  {% assign flaggeditems = flaggeditems %}
+                    {% endif %}
+      <!--            {% if post.author contains "Nehul" %}
                     <div class="post-preview">
                        <a href="{{ post.url }}">
                         <h2 class="post-title">
@@ -24,6 +29,24 @@ order: 1
                         </h3>
                        </a>
                       <p class="post-meta">Posted by <a href="#">{{ post.author }}</a> {{ post.date | date_to_string }}</p>
+                    </div>
+                    <hr>
+                    {% endif %}  -->
+                {% endfor %}
+
+                {% assign flaggeditems = flaggeditems | sort: "flagorder"%}
+
+                {% for item in flaggeditems %}
+                    <div class="post-preview">
+                       <a href="{{ item.url }}">
+                        <h2 class="post-title">
+                            {{ item.title }}
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{ item.description }}
+                        </h3>
+                       </a>
+                      <p class="post-meta">Posted by <a href="#">{{ item.author }}</a> {{ item.date | date_to_string }}</p>
                     </div>
                     <hr>
                 {% endfor %}
