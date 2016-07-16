@@ -1,4 +1,4 @@
 markdown: kramdown
-
+baseurl: http://neorblog.in
 gems:
   - jekyll-sitemap
